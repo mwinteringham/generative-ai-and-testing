@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ContactFormPage {
+
+    // Form fields
     @FindBy(id = "name")
     private WebElement nameField;
 
@@ -24,10 +26,16 @@ public class ContactFormPage {
     @FindBy(id = "submitContact")
     private WebElement submitButton;
 
+    // WebDriver instance
+    private WebDriver driver;
+
+    // Constructor
     public ContactFormPage(WebDriver driver) {
+        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
+    // Methods to interact with the form fields
     public void enterName(String name) {
         nameField.sendKeys(name);
     }
@@ -48,7 +56,7 @@ public class ContactFormPage {
         descriptionField.sendKeys(description);
     }
 
-    public void submitForm() {
+    public void clickSubmitButton() {
         submitButton.click();
     }
 }

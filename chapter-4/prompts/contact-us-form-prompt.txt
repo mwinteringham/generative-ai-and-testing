@@ -1,4 +1,4 @@
-Create a page object using the @FindBy annotation to represent the contact form page. Use the provided HTML as a reference to identify the form fields.
+Create a page object in Java using the @FindBy annotation to represent the contact form page. Use the provided HTML delimited by three hashes as a reference to identify the form fields.
 
     1. Create a new Java class for the contact form page object.
 
@@ -22,6 +22,7 @@ Create a page object using the @FindBy annotation to represent the contact form 
 
     11. Optionally, add additional methods for specific actions or retrieving information from the form.
 
+###
 <form>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
@@ -64,3 +65,4 @@ Create a page object using the @FindBy annotation to represent the contact form 
   <br>
   <button type="button" class="btn btn-outline-primary float-right" id="submitContact">Submit</button>
 </form>
+###

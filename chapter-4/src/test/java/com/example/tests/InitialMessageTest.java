@@ -42,7 +42,7 @@ public class InitialMessageTest {
         contactFormPage.enterPhone("07123456789");
         contactFormPage.enterSubject("Testing");
         contactFormPage.enterDescription("This is a test message");
-        contactFormPage.submitForm();
+        contactFormPage.clickSubmitButton();
 
         driver.get("https://automationintesting.online/#/admin/");
 
