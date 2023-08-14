@@ -5,11 +5,11 @@ import okhttp3.*;
 
 import java.util.ArrayList;
 
-public class ChatGPTClient {
+public class GPTClient {
 
     private static final String API_URL = "https://api.openai.com/v1/chat/completions";
     private String apiKey;
-    public ChatGPTClient(String apiKey){
+    public GPTClient(String apiKey){
         this.apiKey = apiKey;
     }
 
@@ -34,7 +34,7 @@ public class ChatGPTClient {
         String responseBody = response.body().string();
         System.out.println(responseBody);
 
-        return new Gson().fromJson(responseBody, ChatGPTResponse.class).getChoices().get(0).getMessage().getContent();
+        return new Gson().fromJson(responseBody, GPTResponse.class).getChoices().get(0).getMessage().getContent();
     }
 
 }

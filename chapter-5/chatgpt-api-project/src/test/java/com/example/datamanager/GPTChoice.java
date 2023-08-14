@@ -1,6 +1,6 @@
 package com.example.datamanager;
 
-public class ChatGPTChoice {
+public class GPTChoice {
 
     private int index;
 
@@ -8,7 +8,7 @@ public class ChatGPTChoice {
 
     private String finish_reason;
 
-    public ChatGPTChoice(int index, Message message, String finish_reason) {
+    public GPTChoice(int index, Message message, String finish_reason) {
         this.index = index;
         this.message = message;
         this.finish_reason = finish_reason;

@@ -1,6 +1,6 @@
 package com.example.checks;
 
-import com.example.datamanager.ChatGPTClient;
+import com.example.datamanager.GPTClient;
 import com.example.datamanager.ContactFormDetails;
 import com.example.pageobjects.ContactFormPage;
 import com.google.gson.Gson;
@@ -44,8 +44,8 @@ public class ExampleTests {
 
     @Test
     public void exampleContactUsFormTestWithChatGPT() throws Exception {
-        ChatGPTClient chatGPTClient = new ChatGPTClient(System.getProperty("OPENAI_API_KEY"));
-        String testData = chatGPTClient.prompt("You are a data generator. Create me random data in a JSON format based on the criteria delimited by three hashes." +
+        GPTClient GPTClient = new GPTClient(System.getProperty("OPENAI_API_KEY"));
+        String testData = GPTClient.prompt("You are a data generator. Create me random data in a JSON format based on the criteria delimited by three hashes." +
                 "Additional data requirements are shared between back ticks." +
                 "###\n" +
                 "name\n" +
