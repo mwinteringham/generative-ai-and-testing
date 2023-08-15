@@ -43,9 +43,9 @@ public class ExampleTests {
     }
 
     @Test
-    public void exampleContactUsFormTestWithChatGPT() throws Exception {
-        GPTClient GPTClient = new GPTClient(System.getProperty("OPENAI_API_KEY"));
-        String testData = GPTClient.prompt("You are a data generator. Create me random data in a JSON format based on the criteria delimited by three hashes." +
+    public void exampleContactUsFormTestWithGPT() throws Exception {
+        GPTClient gptClient = new GPTClient(System.getProperty("OPENAI_API_KEY"));
+        String testData = gptClient.prompt("You are a data generator. Create me random data in a JSON format based on the criteria delimited by three hashes." +
                 "Additional data requirements are shared between back ticks." +
                 "###\n" +
                 "name\n" +

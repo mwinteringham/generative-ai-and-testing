@@ -27,7 +27,6 @@ public class GPTClient {
                 .url(API_URL)
                 .post(body)
                 .addHeader("Authorization", "Bearer " + apiKey)
-                .addHeader("Content-Type", "application/json")
                 .build();
 
         Response response = client.newCall(request).execute();
