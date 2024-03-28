@@ -1,0 +1,12 @@
+As a user
+In order to get the count of messages
+I want to be able to send a GET request to /count endpoint
+
+Acceptance Criteria
+* If successful, the response should contain the count of messages
+* If unsuccessful due to bad request, the response should be "Bad Request"
+
+HTTP Payload contract
+{
+  "count": integer
+}

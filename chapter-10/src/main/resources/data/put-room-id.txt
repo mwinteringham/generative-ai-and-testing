@@ -1,0 +1,22 @@
+As a hotel manager
+In order to update room information
+I want to be able to modify the details of a specific room identified by its ID
+
+Acceptance Criteria:
+* I should be able to successfully update room details by providing a valid room ID and required data in the request body
+* If I provide invalid data or an invalid room ID, I should receive a 400 Bad Request error
+* If the update is successful, I should receive a response containing the updated room details
+
+HTTP Payload contract
+{
+  "roomid": integer,
+  "roomName": "string",
+  "type": "string",
+  "accessible": boolean,
+  "image": "string",
+  "description": "string",
+  "features": [
+    "string"
+  ],
+  "roomPrice": integer
+}

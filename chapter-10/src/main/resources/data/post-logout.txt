@@ -1,0 +1,13 @@
+As a logged-in user
+In order to end my session
+I want to be able to send a logout request
+
+Acceptance Criteria
+* The request must contain a token in the request body
+* Upon successful logout, a status code of 200 OK should be returned
+* The response body should contain a confirmation message
+
+HTTP Payload contract
+{
+  "token": "string"
+}

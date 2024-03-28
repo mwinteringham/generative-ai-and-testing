@@ -1,0 +1,9 @@
+As a guest
+In order to cancel my booking
+I want to be able to send a DELETE request with the booking ID
+
+Acceptance Criteria:
+- The endpoint should accept a booking ID as a parameter in the path
+- If a valid booking ID is provided, the server should cancel the booking and respond with a status of "OK" (200)
+- If the booking ID is invalid or missing, the server should respond with a "Bad Request" error (400)
+- Optionally, a token can be provided in the cookie for authentication

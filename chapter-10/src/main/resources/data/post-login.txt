@@ -1,0 +1,14 @@
+As a guest
+In order to access my account
+I want to be able to send a login request
+
+Acceptance Criteria
+* The request must contain a username and password in the request body
+* Upon successful login, a status code of 200 OK should be returned
+* The response body should contain a token
+
+HTTP Payload contract
+{
+  "username": "string",
+  "password": "string"
+}

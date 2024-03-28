@@ -1,0 +1,26 @@
+As a guest
+In order to retrieve branding information
+I want to be able to send a GET request to /branding/
+
+Acceptance criteria
+* Upon sending a GET request to /branding/, I should receive branding information in the response.
+* If the request is successful, the response status should be 200 OK.
+* If the request is unsuccessful due to bad parameters or missing data, the response status should be 400 Bad Request.
+* The response body should conform to the schema defined in the Swagger JSON.
+
+HTTP Payload contract
+{
+  "name": "string",
+  "map": {
+    "latitude": integer,
+    "longitude": integer
+  },
+  "logoUrl": "string",
+  "description": "string",
+  "contact": {
+    "name": "string",
+    "address": "string",
+    "phone": "string",
+    "email": "string"
+  }
+}

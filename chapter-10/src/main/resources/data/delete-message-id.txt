@@ -1,0 +1,9 @@
+As a user
+In order to delete a specific message
+I want to be able to send a DELETE request to /{id} endpoint
+
+Acceptance Criteria
+* The request should contain the message ID in the path
+* The request can optionally include a token in the cookie
+* If successful, the response should be "OK"
+* If unsuccessful due to bad request, the response should be "Bad Request"

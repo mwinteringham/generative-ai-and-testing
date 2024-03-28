@@ -1,0 +1,22 @@
+As a hotel manager
+In order to add a new room to inventory
+I want to be able to create a new room
+
+Acceptance Criteria:
+* I should be able to successfully create a new room by providing required data in the request body
+* If I provide invalid data, I should receive a 400 Bad Request error
+* Upon successful creation, I should receive a response containing the details of the newly created room
+
+HTTP Payload contract
+{
+  "roomid": integer,
+  "roomName": "string",
+  "type": "string",
+  "accessible": boolean,
+  "image": "string",
+  "description": "string",
+  "features": [
+    "string"
+  ],
+  "roomPrice": integer
+}

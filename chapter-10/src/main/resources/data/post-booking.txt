@@ -1,0 +1,24 @@
+As a guest
+In order to make a new booking
+I want to be able to send a POST request with the booking details
+
+Acceptance Criteria:
+- The endpoint should accept booking details in the request body in JSON format
+- If the booking is successful, the server should respond with the booking details and a status of "OK" (200)
+- If the booking request is invalid, the server should respond with a "Bad Request" error (400)
+- Optionally, a token can be provided in the cookie for authentication
+
+HTTP Payload contract
+{
+  "bookingid": integer,
+  "roomid": integer,
+  "firstname": "string",
+  "lastname": "string",
+  "depositpaid": boolean,
+  "email": "string",
+  "phone": "string",
+  "bookingdates": {
+    "checkin": "string",
+    "checkout": "string"
+  }
+}

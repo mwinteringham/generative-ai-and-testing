@@ -1,0 +1,8 @@
+As a hotel manager
+In order to remove a room from inventory
+I want to be able to delete a room by its ID
+
+Acceptance Criteria:
+* I should be able to successfully delete a room by providing a valid room ID
+* If I provide an invalid room ID, I should receive a 400 Bad Request error
+* Upon successful deletion, I should receive a confirmation message

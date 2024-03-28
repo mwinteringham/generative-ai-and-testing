@@ -1,0 +1,22 @@
+As a guest
+In order to retrieve information about a booking
+I want to be able to send a GET request with the booking ID
+
+Acceptance Criteria:
+- The endpoint should accept a booking ID as a parameter in the path
+- If a valid booking ID is provided, the server should respond with the details of the booking
+- If the booking ID is invalid or missing, the server should respond with a "Bad Request" error (400)
+- Optionally, a token can be provided in the cookie for authentication
+
+HTTP Payload contract
+{
+  "bookingid": Integer,
+  "roomid": Integer,
+  "firstname": "String",
+  "lastname": "String",
+  "depositpaid": Boolean,
+  "bookingdates": {
+    "checkin": "String",
+    "checkout": "String"
+  }
+}

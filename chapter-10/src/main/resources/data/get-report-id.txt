@@ -1,0 +1,18 @@
+As a guest
+In order to view a specific room report
+I want to be able to send a GET request with the room ID
+
+Acceptance criteria
+* The GET request should include the room ID as a parameter in the path
+* Upon successful request, the server should respond with a specific room report
+
+HTTP Payload contract
+{
+  "report": [
+    {
+      "start": "string",
+      "end": "string",
+      "title": "string"
+    }
+  ]
+}

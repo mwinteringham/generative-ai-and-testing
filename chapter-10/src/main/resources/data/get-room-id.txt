@@ -1,0 +1,21 @@
+As a guest
+In order to view room details
+I want to be able to retrieve information about a specific room by its ID
+
+Acceptance Criteria:
+* I should receive a response containing room details when providing a valid room ID
+* If I provide an invalid room ID, I should receive a 400 Bad Request error
+
+HTTP Payload contract
+{
+  "roomid": integer,
+  "roomName": "string",
+  "type": "string",
+  "accessible": boolean,
+  "image": "string",
+  "description": "string",
+  "features": [
+    "string",
+  ],
+  "roomPrice": integer
+}

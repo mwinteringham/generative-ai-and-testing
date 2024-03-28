@@ -1,0 +1,13 @@
+As a guest
+In order to validate my authentication token
+I want to be able to send a token validation request
+
+Acceptance Criteria
+* The request must contain a token in the request body
+* Upon successful validation, a status code of 200 OK should be returned
+* The response body should contain a token
+
+HTTP Payload contract
+{
+  "token": "string"
+}

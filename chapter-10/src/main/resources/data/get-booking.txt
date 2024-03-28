@@ -1,0 +1,25 @@
+As a guest
+In order to retrieve a list of bookings
+I want to be able to send a GET request to get all bookings
+
+Acceptance Criteria:
+- The endpoint should return a list of all bookings
+- Optionally, a room ID can be provided as a query parameter to filter the bookings
+- Optionally, a token can be provided in the cookie for authentication
+
+HTTP Payload contract
+{
+  "bookings": [
+    {
+      "bookingid": Integer,
+      "roomid": Integer,
+      "firstname": "String",
+      "lastname": "String",
+      "depositpaid": Boolean,
+      "bookingdates": {
+        "checkin": "String",
+        "checkout": "String"
+      }
+    }
+  ]
+}

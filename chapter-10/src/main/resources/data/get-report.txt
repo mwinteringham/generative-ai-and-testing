@@ -1,0 +1,18 @@
+As a guest
+In order to view all room reports
+I want to be able to send a GET request to the base URL
+
+Acceptance criteria
+* The GET request should not require any parameters other than a valid authentication token in the cookie
+* Upon successful request, the server should respond with all room reports
+
+HTTP Payload contract
+{
+  "report": [
+    {
+      "start": "string",
+      "end": "string",
+      "title": "string"
+    }
+  ]
+}

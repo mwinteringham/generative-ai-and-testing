@@ -1,0 +1,25 @@
+As a guest
+In order to update my booking information
+I want to be able to send a PUT request with the booking ID and updated details
+
+Acceptance Criteria:
+- The endpoint should accept a booking ID as a parameter in the path
+- The updated booking details should be provided in the request body in JSON format
+- If the update is successful, the server should respond with the updated booking details and a status of "OK" (200)
+- If the booking ID is invalid or missing, the server should respond with a "Bad Request" error (400)
+- Optionally, a token can be provided in the cookie for authentication
+
+HTTP Payload contract
+{
+  "bookingid": Integer,
+  "roomid": Integer,
+  "firstname": "string",
+  "lastname": "string",
+  "depositpaid": boolean,
+  "email": "string",
+  "phone": "string",
+  "bookingdates": {
+    "checkin": "string",
+    "checkout": "string"
+  }
+}

@@ -1,0 +1,19 @@
+As a user
+In order to retrieve messages
+I want to be able to send a GET request to / endpoint
+
+Acceptance Criteria
+* If successful, the response should contain the retrieved messages
+* If unsuccessful due to bad request, the response should be "Bad Request"
+
+HTTP Payload contract
+{
+  "messages": [
+    {
+      "id": 0,
+      "name": "string",
+      "subject": "string",
+      "read": true
+    }
+  ]
+}

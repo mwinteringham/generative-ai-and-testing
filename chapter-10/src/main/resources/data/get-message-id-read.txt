@@ -1,0 +1,9 @@
+As a user
+In order to mark a message as read
+I want to be able to send a PUT request to /{id}/read endpoint
+
+Acceptance Criteria
+* The request should contain the message ID in the path
+* The request can optionally include a token in the cookie
+* If successful, the response should be "OK"
+* If unsuccessful due to bad request, the response should be "Bad Request"

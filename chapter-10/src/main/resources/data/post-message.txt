@@ -1,0 +1,19 @@
+As a user
+In order to create a new message
+I want to be able to send a POST request to / endpoint
+
+Acceptance Criteria
+* The request should contain a JSON payload representing the message
+* The message JSON payload should contain required fields: description, email, name, phone, subject
+* If successful, the response should contain the created message
+* If unsuccessful due to bad request, the response should be "Bad Request"
+
+HTTP Payload contract
+{
+  "messageid": integer,
+  "name": "string",
+  "email": "string",
+  "phone": "string",
+  "subject": "string",
+  "description": "string"
+}

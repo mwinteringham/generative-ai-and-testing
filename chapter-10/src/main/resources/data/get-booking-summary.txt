@@ -1,0 +1,21 @@
+As a guest
+In order to retrieve a summary of bookings for a specific room
+I want to be able to send a GET request with the room ID
+
+Acceptance Criteria:
+- The endpoint should accept a room ID as a query parameter
+- The server should respond with a summary of bookings for the specified room
+- If the room ID is missing or invalid, the server should respond with a "Bad Request" error (400)
+- Optionally, a token can be provided in the cookie for authentication
+
+HTTP Payload contract
+{
+  "bookings": [
+    {
+      "bookingDates": {
+        "checkin": "String",
+        "checkout": "String"
+      }
+    }
+  ]
+}

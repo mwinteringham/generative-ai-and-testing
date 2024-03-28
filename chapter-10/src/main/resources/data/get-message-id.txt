@@ -1,0 +1,18 @@
+As a user
+In order to retrieve a specific message
+I want to be able to send a GET request to /{id} endpoint
+
+Acceptance Criteria
+* The request should contain the message ID in the path
+* If successful, the response should contain the retrieved message
+* If unsuccessful due to bad request, the response should be "Bad Request"
+
+HTTP Payload contract
+{
+  "messageid": Integer,
+  "name": "String",
+  "email": "String",
+  "phone": "String",
+  "subject": "String",
+  "description": "String"
+}

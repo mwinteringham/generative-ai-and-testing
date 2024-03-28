@@ -1,0 +1,27 @@
+As a guest
+In order to browse available rooms
+I want to be able to retrieve a list of all available rooms
+
+Acceptance Criteria:
+* I should receive a response containing a list of available rooms
+* If there are no available rooms, I should receive an empty list
+* If there's an error retrieving the room list, I should receive a 400 Bad Request error
+
+HTTP Payload Contract
+
+{
+  "rooms": [
+    {
+      "roomid": integer,
+      "roomName": "string",
+      "type": "Single",
+      "accessible": true,
+      "image": "string",
+      "description": "string",
+      "features": [
+        "string"
+      ],
+      "roomPrice": integer
+    }
+  ]
+}
