@@ -72,9 +72,13 @@ public class CompletedRAGDemo {
         prompt = prompt.replace("{relevant_document}", closestMatch)
                 .replace("{user_input}", userInput);
 
+        System.out.println("Created prompt");
+        System.out.println(prompt);
+
         // Perform GPT prompt using the constructed prompt
         GPTClient gptClient = new GPTClient(System.getenv("OPEN_AI_KEY"));
         String response = gptClient.prompt(prompt);
+        System.out.println("Response received:");
         System.out.println(response);
     }
 }
