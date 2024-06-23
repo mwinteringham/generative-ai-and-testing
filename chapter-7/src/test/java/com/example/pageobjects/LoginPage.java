@@ -4,34 +4,34 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-public class LoginFormPage {
-    // Form fields
-    @FindBy(id = "username")
-    private WebElement usernameField;
-
-    @FindBy(id = "password")
-    private WebElement passwordField;
-
-    @FindBy(id = "doLogin")
-    private WebElement loginButton;
+public class LoginPage {
 
     // WebDriver instance
     private WebDriver driver;
 
-    // Constructor
-    public LoginFormPage(WebDriver driver) {
+    // Constructor to initialize the PageFactory
+    public LoginPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    // Methods to interact with the form fields
+    // WebElements for the form fields
+    @FindBy(id = "username")
+    private WebElement usernameInput;
+
+    @FindBy(id = "password")
+    private WebElement passwordInput;
+
+    @FindBy(id = "doLogin")
+    private WebElement loginButton;
+
+    // Methods to interact with the form
     public void enterUsername(String username) {
-        usernameField.sendKeys(username);
+        usernameInput.sendKeys(username);
     }
 
     public void enterPassword(String password) {
-        passwordField.sendKeys(password);
+        passwordInput.sendKeys(password);
     }
 
     public void clickLoginButton() {

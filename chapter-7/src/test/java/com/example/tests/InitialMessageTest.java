@@ -1,10 +1,8 @@
 package com.example.tests;
 
 import com.example.pageobjects.ContactFormPage;
-import com.example.pageobjects.LoginFormPage;
+import com.example.pageobjects.LoginPage;
 import com.example.pageobjects.MessagePage;
-import com.example.requests.MessagePayload;
-import com.example.requests.MessageRequest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -46,10 +44,10 @@ public class InitialMessageTest {
 
         driver.get("https://automationintesting.online/#/admin/");
 
-        LoginFormPage loginFormPage = new LoginFormPage(driver);
-        loginFormPage.enterUsername("admin");
-        loginFormPage.enterPassword("password");
-        loginFormPage.clickLoginButton();
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.enterUsername("admin");
+        loginPage.enterPassword("password");
+        loginPage.clickLoginButton();
 
         driver.get("https://automationintesting.online/#/admin/messages");
 

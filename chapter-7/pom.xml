@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>chapter-5</artifactId>
+    <artifactId>chapter-7</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -24,13 +24,13 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.9.1</version>
+            <version>4.22.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.3.3</version>
+            <version>5.8.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -38,14 +38,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>3.1.0</version>
-        </dependency>
-
-<!--        Adding in Visual AI-->
-        <dependency>
-            <groupId>com.applitools</groupId>
-            <artifactId>eyes-selenium-java5</artifactId>
-            <version>5.52.0</version>
+            <version>3.3.1</version>
         </dependency>
     </dependencies>
 

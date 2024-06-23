@@ -7,53 +7,53 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ContactFormPage {
 
-    // Form fields
-    @FindBy(id = "name")
-    private WebElement nameField;
-
-    @FindBy(id = "email")
-    private WebElement emailField;
-
-    @FindBy(id = "phone")
-    private WebElement phoneField;
-
-    @FindBy(id = "subject")
-    private WebElement subjectField;
-
-    @FindBy(id = "description")
-    private WebElement descriptionField;
-
-    @FindBy(id = "submitContact")
-    private WebElement submitButton;
-
     // WebDriver instance
     private WebDriver driver;
 
-    // Constructor
+    // Constructor to initialize the PageFactory
     public ContactFormPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    // Methods to interact with the form fields
+    // WebElements for the form fields
+    @FindBy(id = "name")
+    private WebElement nameInput;
+
+    @FindBy(id = "email")
+    private WebElement emailInput;
+
+    @FindBy(id = "phone")
+    private WebElement phoneInput;
+
+    @FindBy(id = "subject")
+    private WebElement subjectInput;
+
+    @FindBy(id = "description")
+    private WebElement descriptionTextarea;
+
+    @FindBy(id = "submitContact")
+    private WebElement submitButton;
+
+    // Methods to interact with the form
     public void enterName(String name) {
-        nameField.sendKeys(name);
+        nameInput.sendKeys(name);
     }
 
     public void enterEmail(String email) {
-        emailField.sendKeys(email);
+        emailInput.sendKeys(email);
     }
 
     public void enterPhone(String phone) {
-        phoneField.sendKeys(phone);
+        phoneInput.sendKeys(phone);
     }
 
     public void enterSubject(String subject) {
-        subjectField.sendKeys(subject);
+        subjectInput.sendKeys(subject);
     }
 
     public void enterDescription(String description) {
-        descriptionField.sendKeys(description);
+        descriptionTextarea.sendKeys(description);
     }
 
     public void clickSubmitButton() {
