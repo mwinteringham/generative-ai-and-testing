@@ -1,9 +1,9 @@
 package com.example.checks;
 
-import com.example.datamanager.GPTClient;
 import com.example.datamanager.ContactFormDetails;
 import com.example.pageobjects.ContactFormPage;
 import com.google.gson.Gson;
+import dev.langchain4j.model.openai.OpenAiChatModel;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -43,17 +43,21 @@ public class ExampleTests {
     }
 
     @Test
-    public void exampleContactUsFormTestWithGPT() throws Exception {
-        GPTClient gptClient = new GPTClient(System.getProperty("OPENAI_API_KEY"));
-        String testData = gptClient.prompt("You are a data generator. Create me random data in a JSON format based on the criteria delimited by three hashes." +
-                "Additional data requirements are shared between back ticks." +
-                "###\n" +
-                "name\n" +
-                "email\n" +
-                "phone `UK format`\n" +
-                "subject `Over 20 characters in length`\n" +
-                "description `Over 50 characters in length`\n" +
-                "###");
+    public void exampleContactUsFormTestWithGPT() {
+        OpenAiChatModel model = OpenAiChatModel.withApiKey("Enter API key");
+        String prompt = """
+                You are a data generator. Create me random data in a JSON format based on the criteria delimited by three hashes.
+                Additional data requirements are shared between back ticks.
+                ###
+                name
+                email
+                phone `UK format`
+                subject `Over 20 characters in length`
+                description `Over 50 characters in length`
+                ###
+                """;
+
+        String testData = model.generate(prompt);
 
         ContactFormDetails contactFormDetails = new Gson().fromJson(testData, ContactFormDetails.class);
 
