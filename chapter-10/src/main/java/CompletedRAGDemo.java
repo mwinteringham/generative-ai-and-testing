@@ -1,4 +1,4 @@
-import client.GPTClient;
+import dev.langchain4j.model.openai.OpenAiChatModel;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.text.similarity.CosineDistance;
 
@@ -75,9 +75,9 @@ public class CompletedRAGDemo {
         System.out.println("Created prompt");
         System.out.println(prompt);
 
-        // Perform GPT prompt using the constructed prompt
-        GPTClient gptClient = new GPTClient(System.getenv("OPEN_AI_KEY"));
-        String response = gptClient.prompt(prompt);
+        // Perform GPT prompt using LangChain
+        OpenAiChatModel model = OpenAiChatModel.withApiKey("enter-api-key");
+        String response = model.generate(prompt);
         System.out.println("Response received:");
         System.out.println(response);
     }
