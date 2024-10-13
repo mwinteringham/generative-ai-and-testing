@@ -11,26 +11,30 @@ import java.net.URI;
 public class MessageRequest {
 
     public void sendRequest(MessagePayload payload) {
-        // Create a RestTemplate instance
+        // Create a RestTemplate instance, which is used to make HTTP requests
         RestTemplate restTemplate = new RestTemplate();
 
-        // Set the request URL
+        // Define the URL to which the HTTP request will be sent
         String url = "https://automationintesting.online/message/";
 
-        // Set the request headers
+        // Create an HttpHeaders object to store the headers for the request
         HttpHeaders headers = new HttpHeaders();
+        
+        // Set the "Accept" header to specify that the client expects JSON in response
         headers.set(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);
+        
+        // Set the "Content-Type" header to specify that the request body will be in JSON format
         headers.set(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);
 
-        // Create the request entity with the payload and headers
+        // Create a RequestEntity, which encapsulates the request payload, headers, HTTP method, and the target URI
         RequestEntity<MessagePayload> requestEntity = new RequestEntity<>(
-                payload,
-                headers,
-                HttpMethod.POST,
-                URI.create(url)
+                payload,       // The request body (payload) to be sent
+                headers,       // The HTTP headers (including content type and accept type)
+                HttpMethod.POST, // The HTTP method (in this case, POST)
+                URI.create(url)  // The URI to send the request to
         );
 
-        // Send the HTTP request
+        // Use the RestTemplate to send the HTTP request, with the response type set to Void (we don't expect a response body)
         restTemplate.exchange(requestEntity, Void.class);
     }
 }
